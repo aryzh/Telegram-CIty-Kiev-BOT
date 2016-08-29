@@ -26,6 +26,9 @@ Code structure:
 - InputText - dictinaries to check user requests
 - OutputText - dictinaries for randomtype outputs
 
+
+https://www.interesniy.kiev.ua/wp-content/uploads/2014/04/1101.jpg
+
 order new token from Telegram FatherBot if you want to use code.  
 token = "your token IDs "
 
@@ -33,4 +36,4 @@ token = "your token IDs "
 Пишите в коментариях, что бы вы хотели добавить в функционал городского бота
 
  Andrii 
- linkedin.com/in/andrii
+ www.linkedin.com/in/andrii
