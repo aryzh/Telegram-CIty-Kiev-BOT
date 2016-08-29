@@ -1,9 +1,10 @@
-# Telegram-City-Kiev-BOT
-Information BOT for Kiev Ukraine
+# Telegram-City-Kiev-BOT based on pyTelegramBotAPI.
 
-HELLO PLEASE DON'T DOWNLOAD - UNDER CONSTRACTION
+Information City BOT for Kiev Ukraine. RUSSIAN output. ENG or Russian inputs.
 
-Kiev City BOT understands ~ 1000 commands and supports:
+Справочный городской БОТ для мессанджера Телеграм. Погода, гороскоп, девушки, справочник метро и калькулятор станций, шутки, цитаты великих и фото для настроения. Пишите, что бы вы хотели добавить в комментах.
+
+Kiev City BOT understands more than 1000 commands and supports:
 
 - metro station list and desciption for all station
 - travel calculator for Kiev metro
@@ -12,13 +13,28 @@ Kiev City BOT understands ~ 1000 commands and supports:
 - exchange rate (offisional and real)  EUR USD 
 - horoscope for today and tomorrow
 - random joke
+- quotation of Great
 
 planning:
 - iq test 
 - transport info
 - add in comments
 
+Code structure:
+- MyKievBot.py - main bot body based on pyTelegramBotAPI library
+- config - configuration file for bot administrator
+- function - file to store func to check weather, exchange rate, horoscope or trasport metrics
+- InputText - dictinaries to check user requests
+- OutputText - dictinaries for randomtype outputs
 
 
-Пишите коментарии, о том что можно добавить в функионал городского бота
 
+
+order new token from Telegram FatherBot if you want to use code.  
+token = "your token IDs "
+
+
+Пишите в коментариях, что бы вы хотели добавить в функционал городского бота
+
+ Andrii 
+ www.linkedin.com/in/andrii
