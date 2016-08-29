@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*
 # configuration file for Telegram BOT administration team
-import Hide.tokenPrivate
-#bot token from Father bot. Given during registration
-token = Hide.tokenPrivate.tokenhide
-
 
 #path to upload random city photo. use only english keyboard and digits for photo file names.
 pathKievPhoto = r"kievPhoto"
 pathGirls = r"girlsPhoto"
-#file with anectods or funny stories
-
-
-helloMessage = "ПривеТ, это Киев, ДеТкА :) Просто спроси и всё узнаешь"
 
 #input text from user  with dictinaries from list
 exchangeInputText = open(r"InputTexts/exchange", 'r', encoding='utf-8').readlines()
@@ -36,8 +28,14 @@ metroOutput2 = open(r"OutputTexts/metro2", 'r', encoding='utf-8').readlines()
 metroOutput3 = open(r"OutputTexts/metro3", 'r', encoding='utf-8').readlines()
 tagOutput = "OutputTexts/tag"
 iqOutput = open(r"OutputTexts/iq", 'r', encoding='utf-8').readlines()
+helloMessage = open(r"OutputTexts/hello", 'r', encoding='utf-8').readlines()
+askmeOutput = open(r"OutputTexts/askme", 'r', encoding='utf-8').readlines()
 
 
 # Parsing links to external websites to parse
 weatherURL = r"http://api.wunderground.com/api/476242cbfcd192ce/conditions/lang:RU/q/Ukraine/Kyiv.json"
 astroURL = r"http://img.ignio.com/r/export/utf/xml/daily/com.xml"
+yahooFinanceURL = r"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDUAH,EURUAH%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="
+privatURL = r"https://api.privatbank.ua/p24api/pubinfo?json&exchange"
+ukrSibURL = r"http://resources.finance.ua/ru/public/currency-cash.json"
+nationalBankURL = r"http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json"

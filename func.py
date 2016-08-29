@@ -40,7 +40,7 @@ def weather():
 #to parse hrivnta exchange rate from Yahoo
 def yahooFinance():
     try:
-        resp = urlopen(r"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDUAH,EURUAH%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=")
+        resp = urlopen(config.yahooFinanceURL)
     except URLError:
         return "Курс уточняется : Yahoo"
 
@@ -53,7 +53,7 @@ def yahooFinance():
 #to parse hrivna exchange rate from Privat Bank
 def privatBankFinance():
     try:
-        resp = urlopen(r"https://api.privatbank.ua/p24api/pubinfo?json&exchange")
+        resp = urlopen(config.privatURL)
     except URLError:
         return "Курс уточняется : Приват"
     json_data = resp.read().decode('utf-8', 'replace')
@@ -71,7 +71,7 @@ def privatBankFinance():
 #to parse hrivna exchange rate from UkrSibBank Bank
 def UkrSibBankFinance():
     try:
-        resp = urlopen(r"http://resources.finance.ua/ru/public/currency-cash.json")
+        resp = urlopen(config.ukrSibURL)
     except URLError:
         return "Курс обновляется : УкрСиб"
 
@@ -89,7 +89,7 @@ def UkrSibBankFinance():
 
 def nationalBankFinance():
     try:
-        resp = urlopen(r"http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
+        resp = urlopen(config.nationalBankURL)
     except URLError:
         return "Курс уточняется : НацБанк"
 
@@ -111,7 +111,7 @@ def string_to_float(s):
         return s
 
 # to open flat files as dictionary
-def file_to_dict(file):
+def file_to_int_dict(file):
     dict = {}
     with open(file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -120,8 +120,7 @@ def file_to_dict(file):
     return dict
 
 # to open flat files as dictionary
-def file_to_dict2(file):
-
+def file_to_dict(file):
     dict = {}
     with open(file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -149,14 +148,12 @@ def time_to_station(a,b):
 
 #to select random value from dictionary
 def random_tag():
-   dict = file_to_dict2(config.tagOutput)
+   dict = file_to_dict(config.tagOutput)
    rkey = random.choice(list(dict.keys()))
    return dict[rkey]
 
 def random_person_tag():
-
-   dict = file_to_dict2(config.tagOutput)
-
+   dict = file_to_dict(config.tagOutput)
    keys = list(dict.keys())
    return keys
 
