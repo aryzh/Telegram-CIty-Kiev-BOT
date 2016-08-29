@@ -2,7 +2,7 @@
 
 Information City BOT for Kiev Ukraine. RUSSIAN output. ENG or Russian inputs.
 
-Справочный городской БОТ для мессанджера Телеграм. Погода, гороскоп, девушки, справочник метро и калькулятор станций, шутки и фото для настроения. Пишите, что бы вы хотели добавить в комментах.
+Справочный городской БОТ для мессанджера Телеграм. Погода, гороскоп, девушки, справочник метро и калькулятор станций, шутки, цитаты великих и фото для настроения. Пишите, что бы вы хотели добавить в комментах.
 
 Kiev City BOT understands more than 1000 commands and supports:
 
@@ -13,6 +13,7 @@ Kiev City BOT understands more than 1000 commands and supports:
 - exchange rate (offisional and real)  EUR USD 
 - horoscope for today and tomorrow
 - random joke
+- quotation of Great
 
 planning:
 - iq test 
@@ -27,7 +28,7 @@ Code structure:
 - OutputText - dictinaries for randomtype outputs
 
 
-https://www.interesniy.kiev.ua/wp-content/uploads/2014/04/1101.jpg
+
 
 order new token from Telegram FatherBot if you want to use code.  
 token = "your token IDs "
