@@ -13,7 +13,7 @@ Kiev City BOT understands ~ 1000 commands and supports:
 - horoscope for today and tomorrow
 - random joke
 
-planing:
+planning:
 - iq test 
 - transport info
 - add in comments
