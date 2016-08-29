@@ -20,15 +20,17 @@ planning:
 - add in comments
 
 Code structure:
-MyKievBot.py - main bot body based on pyTelegramBotAPI library
-config - configuration file for bot administrator
-function - file to store func to check weather, exchange rate, horoscope or trasport metrics
-InputText - dictinaries to check user requests
-OutputText - dictinaris for randomtype outputs
+- MyKievBot.py - main bot body based on pyTelegramBotAPI library
+- config - configuration file for bot administrator
+- function - file to store func to check weather, exchange rate, horoscope or trasport metrics
+- InputText - dictinaries to check user requests
+- OutputText - dictinaries for randomtype outputs
 
-to run order new token from Telegram FatherBot
+order new token from Telegram FatherBot if you want to use code.  
+token = "your token IDs "
 
 
 Пишите в коментариях, что бы вы хотели добавить в функционал городского бота
 
-Andrii linkedin.com/in/andrii
+ Andrii 
+ linkedin.com/in/andrii
