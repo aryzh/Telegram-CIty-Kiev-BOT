@@ -9,7 +9,7 @@ token = Hide.tokenPrivate.tokenhide
 pathKievPhoto = r"kievPhoto"
 pathGirls = r"girlsPhoto"
 #file with anectods or funny stories
-afile = "funny.txt"
+
 
 helloMessage = "ПривеТ, это Киев, ДеТкА :) Просто спроси и всё узнаешь"
 
@@ -29,13 +29,14 @@ tagInputText = open(r"InputTexts/tag", 'r', encoding='utf-8').readlines()
 iqInputText = open(r"InputTexts/iq", 'r', encoding='utf-8').readlines()
 
 #data dictinaries for BOT answers to users
-funnyOutput = open("funny.txt", 'r', encoding='utf-8').readlines()
+funnyOutput = open(r"OutputTexts/funny.txt", 'r', encoding='utf-8').readlines()
 deputyOutput = open(r"OutputTexts/deputy", 'r', encoding='utf-8').readlines()
 metroOutput1 = open(r"OutputTexts/metro1", 'r', encoding='utf-8').readlines()
 metroOutput2 = open(r"OutputTexts/metro2", 'r', encoding='utf-8').readlines()
 metroOutput3 = open(r"OutputTexts/metro3", 'r', encoding='utf-8').readlines()
 tagOutput = "OutputTexts/tag"
 iqOutput = open(r"OutputTexts/iq", 'r', encoding='utf-8').readlines()
+
 
 # Parsing links to external websites to parse
 weatherURL = r"http://api.wunderground.com/api/476242cbfcd192ce/conditions/lang:RU/q/Ukraine/Kyiv.json"

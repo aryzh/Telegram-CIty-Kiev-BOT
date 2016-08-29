@@ -9,7 +9,7 @@ tokenprivate.py
 token
 Hide/
 hide/
-
+Procfile
 # C extensions
 *.so
 
@@ -149,3 +149,4 @@ $RECYCLE.BIN/
 /Hide/tokenPrivate.py
 /.gitignore
 /.gitattributes
+/Procfile
