@@ -84,9 +84,6 @@ def echo_msg(message):
     elif (message.text + "\n") in config.funnyInputText:
         bot.send_message(message.chat.id, random.choice(config.funnyOutput))
 
-    elif (message.text + "\n") in config.putinInputText:
-        bot.send_message(message.chat.id, random.choice(config.putinOutput))
-
     elif (message.text + "\n") in config.deputyInputText:
         bot.send_message(message.chat.id, random.choice(config.deputyOutput))
 
