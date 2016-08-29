@@ -19,6 +19,8 @@ planning:
 - add in comments
 
 
+to run order new token from Telegram FatherBot
+
 
 Пишите коментарии, о том что можно добавить в функионал городского бота
 
