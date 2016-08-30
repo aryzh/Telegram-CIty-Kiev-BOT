@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*
-# main file for Telegram BOT.
-# For developers only.  If you are admin user kindly check config.py
+# main file for Telegram BOT. For DevOps Team only.  If you are admin user kindly check config.py
 
 import telebot
 import config
@@ -9,9 +8,10 @@ import os
 import random
 import re
 from telebot import types
+import Hide.tokenPrivate
 
 # create a new Telegram Bot object
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(Hide.tokenPrivate.tokenhide)
 
 ############################### COMMANDS INPUTS  #######################################################################
 #Block of BOT main commands. For Example /start / help /USD
@@ -26,32 +26,11 @@ def start(message):
     markup.add(itembtn0, itembtn1, itembtn2, itembtn3)
 
 #sending to User HELLO message
-    bot.send_message(message.chat.id, config.helloMessage, reply_markup = markup)
+    bot.send_message(message.chat.id, random.choice(config.helloMessage), reply_markup = markup)
 #sending to user help infromation
 @bot.message_handler(commands=["справка", "help", "h", "c"])
 def start(message):
     bot.send_message(message.chat.id, "Бот понимает несколько тысяч запросов. Например: девушки, гороскоп, транспорт, метро, шутка, погода, курс и т.д. Или напишите слово:  все ")
-
-#sending to User exchange rate information
-@bot.message_handler(commands=["USD", "U", "доллар", "курс"])
-def start(message):
-    bot.send_message(message.chat.id, func.yahooFinance())
-    bot.send_message(message.chat.id, func.privatBankFinance())
-    #bot.send_message(message.chat.id, func.UkrSibBankFinance())
-    bot.send_message(message.chat.id, func.nationalBankFinance())
-
-#sending to User traffic information
-@bot.message_handler(commands=["traf", "t", "tr", "tra",  "traf fic", "траф"  , "т", "траффик", "тр", "тра", "пробки", "aэропорт"])
-def start(message):
-    bot.send_message(message.chat.id, "Напишете на выбор: метро, трам, автобус, маршрутка")
-
-@bot.message_handler(commands=["погода"])
-def start(message):
-    bot.send_message(message.chat.id, func.weather())
-
-@bot.message_handler(commands=["приколы"])
-def start(message):
-    bot.send_message(message.chat.id, random.choice(config.funnyOutput))
 
 ##################################  TEXT INPUT #########################################################################
 #Starting BLOCK to response for users TEXT
@@ -91,8 +70,8 @@ def echo_msg(message):
         photoRandomCity = open(os.path.join(config.pathKievPhoto, random.choice(os.listdir(config.pathKievPhoto))), "rb")
         bot.send_photo(message.chat.id, photoRandomCity)
 
-    elif message.text in (func.file_to_dict(config.astroInputText)).keys():
-        bot.send_message(message.chat.id, func.astro(func.file_to_dict(config.astroInputText)[message.text]))
+    elif message.text in (func.file_to_int_dict(config.astroInputText)).keys():
+        bot.send_message(message.chat.id, func.astro(func.file_to_int_dict(config.astroInputText)[message.text]))
 
     elif (message.text + "\n") in                                                                                                                                                                                                                                                                             config.metroInputText:
         bot.send_message(message.chat.id, "Напиши мс для списка станций метро потом м11 или м87 номер твоей станции, а также м11м71 для рассчета времени на дорогу")
@@ -105,8 +84,8 @@ def echo_msg(message):
         bot.send_message(message.chat.id, "на метро доедете за минут так ...")
         bot.send_message(message.chat.id, func.time_to_station(int(message.text[1:3]), int(message.text[4:6])))
 
-    elif message.text in (func.file_to_dict2(config.metroHelpInput)).keys():
-        bot.send_message(message.chat.id, func.file_to_dict2(config.metroHelpInput)[message.text])
+    elif message.text in (func.file_to_dict(config.metroHelpInput)).keys():
+        bot.send_message(message.chat.id, func.file_to_dict(config.metroHelpInput)[message.text])
 
     elif (message.text + "\n") in config.tagInputText:
         bot.send_message(message.chat.id, func.random_tag())
@@ -119,7 +98,7 @@ def echo_msg(message):
 
           #please send message again as template was not found
     else:
-        bot.send_message(message.chat.id, "Крошка, я понимаю 10000 комманд, попробуй еще раз, Заец")
+        bot.send_message(message.chat.id, random.choice(config.askmeOutput))
 
 
 ########################################## AUDIO DOC PHOTO INPUT #######################################################

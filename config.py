@@ -6,7 +6,7 @@ pathKievPhoto = r"kievPhoto"
 pathGirls = r"girlsPhoto"
 
 #input text from user  with dictinaries from list
-exchangeInputText = open(r"InputTexts/exchange", 'r', encoding='utf-8').readlines()
+exchangeInputText = open(   r"InputTexts/exchange", 'r', encoding='utf-8').readlines()
 girlsInputText = open(r"InputTexts/girls", 'r', encoding='utf-8').readlines()
 taxiInputText = open(r"InputTexts/taxi", 'r', encoding='utf-8').readlines()
 weatherInputText = open(r"InputTexts/weather", 'r', encoding='utf-8').readlines()

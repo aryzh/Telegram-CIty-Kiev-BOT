@@ -157,6 +157,6 @@ def random_person_tag():
    keys = list(dict.keys())
    return keys
 
-# need tu be updated
+# need to be updated
 def exchange_validation(s):
     return s
